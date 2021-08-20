@@ -79,12 +79,15 @@ $perpustakaan = query('SELECT * FROM buku');
     }
 ?>
 <div class=" uk-container">
-<a class="uk-button uk-button-primary" href="#modal-center" uk-toggle>Tambahkan Buku</a>
-
+<div class=" uk-margin">
     <form action="" method="post">
-        <input class="uk-search-input uk-input" type="text" name="keyword" autofocus placeholder="Masukan Keyword Pencarian.."  autocomplete="off">
-        <button class="uk-button" type="submit" name="cari">Search</button>
+    <a class="uk-button uk-button-primary" href="#modal-center" uk-toggle>Tambahkan User</a>
+    <a class="uk-padding" href=""></a>
+        <span class="uk-margin-small-right" uk-icon="icon: search"></span><input  class="uk-input uk-form-width-large " type="text" name="keyword" autofocus placeholder="Masukan Keyword Pencarian.."  autocomplete="off"> 
+        <a class="uk-padding-small" href=""></a>
+        <button class="uk-button uk-button-primary" type="submit" name="cari">Search</button>
     </form>
+</div>
 
 
 

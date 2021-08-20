@@ -68,10 +68,13 @@ else{
 
 <div class="uk-container">
   <br>
-<form action="" method="post">
-        <input class="uk-search-input uk-input" type="text" name="keyword" autofocus placeholder="Masukan Keyword Pencarian.."  autocomplete="off">
-        <button class="uk-button" type="submit" name="cari">Search</button>
+  <div class=" uk-margin">
+    <form action="" method="post">
+        <span class="uk-margin-small-right" uk-icon="icon: search"></span><input  class="uk-input uk-form-width-large " type="text" name="keyword" autofocus placeholder="Masukan Keyword Pencarian.."  autocomplete="off"> 
+        <a class="uk-padding-small" href=""></a>
+        <button class="uk-button uk-button-primary" type="submit" name="cari">Search</button>
     </form>
+</div>
 
     <div id="cards_landscape_wrap-2">
                     <div class="">
