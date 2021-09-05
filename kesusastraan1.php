@@ -15,12 +15,11 @@
 <body>
 
 <?php 
-	include 'function.php';
+  include 'function.php';
 
 	session_start();
 
 $perpustakaan = query('SELECT * FROM buku');
- 
 	// cek apakah yang mengakses halaman ini sudah login
 	if(!isset ($_SESSION['level2']) ) {
 		header("location:index.php");
@@ -44,10 +43,11 @@ else{
             <ul class="uk-nav uk-nav-default">
                 <li class="uk-h3"><span class="uk-margin-small-right" uk-icon="icon: menu" width="25"></span>Menu</li>
                 <li class="uk-nav-divider"></li>
-                <li><a href="halaman_petugas.php" class="uk-h3"><span class="uk-margin-small-right" uk-icon="icon: home"></span>Beranda</a></li>
+                <li><a href="halaman_admin.php" class="uk-h3"><span class="uk-margin-small-right" uk-icon="icon: home"></span>Beranda</a></li>
                 <li><a href="#" class="uk-h3"><span class="uk-margin-small-right" uk-icon="icon: info"></span>Informasi</a></li>
                 <li><a href="tabel_siswa.php" class="uk-h3"><span class="uk-margin-small-right" uk-icon="icon: users"></span>Tabel Siswa</a></li>
-                <li><a href="crud_buku1.php" class="uk-h3"><span class="uk-margin-small-right" uk-icon="icon:  thumbnails"></span>Kelola Buku</a></li>
+                <li><a href="tabel_petugas.php" class="uk-h3"><span class="uk-margin-small-right" uk-icon="icon: users"></span>Tabel Petugas</a></li>
+                <li><a href="crud_buku.php" class="uk-h3"><span class="uk-margin-small-right" uk-icon="icon:  thumbnails"></span>Kelola Buku</a></li>
             </ul>
 
         </div>
@@ -66,9 +66,9 @@ else{
 
 </nav>
 
- <div class="uk-container">
-<br>
-<div class=" uk-margin">
+<div class="uk-container">
+  <br>
+  <div class=" uk-margin">
     <form action="" method="post">
         <span class="uk-margin-small-right" uk-icon="icon: search"></span><input  class="uk-input uk-form-width-large " type="text" name="keyword" autofocus placeholder="Masukan Keyword Pencarian.."  autocomplete="off"> 
         <a class="uk-padding-small" href=""></a>
@@ -79,9 +79,13 @@ else{
     <div id="cards_landscape_wrap-2">
                     <div class="">
                         <div class="row">
-                        <?php foreach ($perpustakaan as $siswa ) { ?>
+                        <?php 
+                        include "koneksi.php";
+                                 $query    =mysqli_query($koneksi, "SELECT * FROM buku ORDER BY id DESC");
+                                 while($siswa    =mysqli_fetch_array($query)){
+                        ?>
                                 <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
-                                <!-- <a href=""> -->
+                                <a href="detail1.php?id=<?= $siswa['id'] ?>" uk-toggle>
                                     <div class="card-flyer">
                                         <div class="text-box">
                                             <div class="image-box">

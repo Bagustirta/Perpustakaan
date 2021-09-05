@@ -32,6 +32,8 @@
 					<li><a href="tabel_siswa.php" class="uk-h3"><span class="uk-margin-small-right" uk-icon="icon: users"></span>Tabel Siswa</a></li>
 					<li><a href="tabel_petugas.php" class="uk-h3"><span class="uk-margin-small-right" uk-icon="icon: users"></span>Tabel Petugas</a></li>
 					<li><a href="crud_buku.php" class="uk-h3"><span class="uk-margin-small-right" uk-icon="icon:  thumbnails"></span>Kelola Buku</a></li>
+					<li><a href="pinjam.php" class="uk-h3"><span class="uk-margin-small-right" uk-icon="icon:  thumbnails"></span>Peminjaman</a></li>
+					<li><a href="kembali.php" class="uk-h3"><span class="uk-margin-small-right" uk-icon="icon:  thumbnails"></span>Pengembalian</a></li>
 				</ul>
 
 			</div>

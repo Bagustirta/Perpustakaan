@@ -30,7 +30,9 @@
                     <li><a href="#" class="uk-h3"><span class="uk-margin-small-right" uk-icon="icon: info"></span>Informasi</a></li>
 					<li><a href="#" class="uk-h3"><span class="uk-margin-small-right" uk-icon="icon: users"></span>Tabel siswa</a></li>
                     <li><a href="crud_buku1.php" class="uk-h3"><span class="uk-margin-small-right" uk-icon="icon:  thumbnails"></span>Kelola Buku</a></li>
-				</ul>
+                    <li><a href="pinjam1.php" class="uk-h3"><span class="uk-margin-small-right" uk-icon="icon:  thumbnails"></span>Peminjaman</a></li>
+					<li><a href="kembali1.php" class="uk-h3"><span class="uk-margin-small-right" uk-icon="icon:  thumbnails"></span>Pengembalian</a></li>
+                </ul>
 
 			</div>
 		</div>

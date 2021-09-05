@@ -11,9 +11,10 @@ if(isset($_POST['simpan'])){
 	$judul = $_POST['judul'];
 	$tempat_terbit = $_POST['tempat_terbit'];
 	$tahun_terbit = $_POST['tahun_terbit'];
+	$jumlah = $_POST['jumlah'];
 	
 	// buat query update
-	$sql = "UPDATE buku SET foto='$foto', judul='$judul', tempat_terbit='$tempat_terbit', tahun_terbit='$tahun_terbit' WHERE id=$id";
+	$sql = "UPDATE buku SET foto='$foto', judul='$judul', tempat_terbit='$tempat_terbit', tahun_terbit='$tahun_terbit', jumlah='$jumlah' WHERE id=$id";
 	$query = mysqli_query($koneksi, $sql);
 	
 	// apakah query update berhasil?

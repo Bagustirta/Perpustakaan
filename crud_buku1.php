@@ -31,6 +31,8 @@
                     <li><a href="#" class="uk-h3"><span class="uk-margin-small-right" uk-icon="icon: info"></span>Informasi</a></li>
                     <li><a href="tabel_siswa1.php" class="uk-h3"><span class="uk-margin-small-right" uk-icon="icon: users"></span>Tabel Siswa</a></li>
                     <li><a href="#" class="uk-h3"><span class="uk-margin-small-right" uk-icon="icon:  thumbnails"></span>Kelola Buku</a></li>
+                    <li><a href="pinjam1.php" class="uk-h3"><span class="uk-margin-small-right" uk-icon="icon:  thumbnails"></span>Peminjaman</a></li>
+					<li><a href="kembali1.php" class="uk-h3"><span class="uk-margin-small-right" uk-icon="icon:  thumbnails"></span>Pengembalian</a></li>
 				</ul>
 
 			</div>
@@ -124,6 +126,13 @@ $perpustakaan = query('SELECT * FROM buku');
                 </div>
             </div>
 
+            <div class="uk-margin">
+                <label class="uk-form-label" for="form-horizontal-text tahun_terbit">Jumlah Buku</label>
+                <div class="uk-form-controls">
+                    <input class="uk-input" name="jumlah" id="form-horizontal-text jumlah" required="required" type="int" placeholder="Masukkan Tahun Terbit...">
+                </div>
+            </div>
+
             <button class="uk-align-center uk-button uk-button-primary" type="submit" value="submit" name="submit">Tambahkan</button>
 
         </form>
@@ -138,6 +147,7 @@ $perpustakaan = query('SELECT * FROM buku');
                     <th class="uk-text-center">Judul</th>
                     <th class="uk-text-center">Tempat Terbit</th>
                     <th class="uk-text-center">Tahun Terbit</th>
+                    <th class="uk-text-center">Jumlah Buku</th>
                     <th class="uk-text-center">Action</th>
                 </tr>
   
@@ -150,6 +160,7 @@ $perpustakaan = query('SELECT * FROM buku');
                             <td><?php echo $siswa['judul'] ?></td>
                             <td><?php echo $siswa['tempat_terbit'] ?></td>
                             <td><?php echo $siswa['tahun_terbit'] ?></td>
+                            <td><?php echo $siswa['jumlah'] ?></td>
                             <td>
                                 <a class="uk-button uk-button-primary" href="edit4.php?id=<?php echo $siswa['id']; ?>">Edit</a> | 
                                 <a class="uk-button uk-button-danger" href="hapus4.php?id=<?php echo $siswa['id']; ?>">Hapus</a>

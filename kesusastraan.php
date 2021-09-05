@@ -79,9 +79,13 @@ else{
     <div id="cards_landscape_wrap-2">
                     <div class="">
                         <div class="row">
-                        <?php foreach ($perpustakaan as $siswa ) { ?>
+                        <?php 
+                        include "koneksi.php";
+                                 $query    =mysqli_query($koneksi, "SELECT * FROM buku ORDER BY id DESC");
+                                 while($siswa    =mysqli_fetch_array($query)){
+                        ?>
                                 <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
-                                <!-- <a href=""> -->
+                                <a href="detail.php?id=<?= $siswa['id'] ?>" uk-toggle>
                                     <div class="card-flyer">
                                         <div class="text-box">
                                             <div class="image-box">

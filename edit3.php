@@ -51,7 +51,7 @@ if( mysqli_num_rows($query) < 1 ){
 
         <div class="uk-margin" uk-margin>
             <label class="uk-form-label" for="form-horizontal-text foto">Foto</label>
-                    <input class="uk-input uk-form-width-medium" required="required" name="foto" id="foto" value="<?php echo $siswa['foto'] ?>" type="file" placeholder="Select file" >
+            <input class="uk-input uk-form-width-medium"  name="foto" id="foto" value="<?php echo $siswa['foto'] ?>" type="file" placeholder="Select file" >
             </div>
 
             <div class="uk-margin">
@@ -72,6 +72,13 @@ if( mysqli_num_rows($query) < 1 ){
                 <label class="uk-form-label" for="form-horizontal-text tahun_terbit">Tahun Terbit</label>
                 <div class="uk-form-controls">
                     <input class="uk-input" name="tahun_terbit" id="form-horizontal-text tahun_terbit" value="<?php echo $siswa['tahun_terbit']; ?>" type="text" placeholder="Masukkan Tahun Terbit...">
+                </div>
+            </div>
+
+            <div class="uk-margin">
+                <label class="uk-form-label" for="form-horizontal-text tahun_terbit">Jumlah Buku</label>
+                <div class="uk-form-controls">
+                    <input class="uk-input" name="jumlah" id="form-horizontal-text jumlah" value="<?php echo $siswa['jumlah']; ?>" type="text" placeholder="Masukkan Tahun Terbit...">
                 </div>
             </div>
 

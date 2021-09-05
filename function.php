@@ -83,6 +83,22 @@ function tambah4($data) {
         return mysqli_affected_rows($conn);
 }
 
+function tambah5($data) {
+    global $conn;
+    $lama_pinjam= 5;
+    $sekarang = date('d-m-Y');
+    $tanggal_kembali = date('d-m-Y', strtotime('+5 days'));    
+
+        $nis = $data['nis'];
+        $nama = $data['nama'];
+        $judul = $data['judul'];
+        $tgl_kembali = $tgl_kembali;
+        $query = "INSERT INTO pinjam VALUES ('', '$nis', '$nama', '$judul',)";
+        mysqli_query($conn, $query);
+
+        return mysqli_affected_rows($conn);
+}
+
 function cari($keyword) {
     $query = "SELECT * FROM buku 
     WHERE 
