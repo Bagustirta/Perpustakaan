@@ -28,7 +28,7 @@ if (isset($_POST['submit'])) {
 <!DOCTYPE html>
 <html>
 <head>
- <title>Tutorial PHP</title>
+ <title>Peminjaman</title>
  <link rel="stylesheet" href="css/uikit.min.css" />
     <script src="js/uikit.min.js"></script>
     <script src="js/uikit-icons.min.js"></script>
@@ -72,7 +72,6 @@ if (isset($_POST['submit'])) {
 </nav>
 
 <div class="container mt-4">
-<br>
 <div class=" uk-margin">
     <form action="" method="post">
         <a class="uk-button uk-button-primary" href="#modal-center" uk-toggle>Tambahkan User</a>
@@ -135,13 +134,13 @@ if (isset($_POST['submit'])) {
     </div>
 </div>
 
-   <table class="table table-bordered mt-4">
-    <tr>
-     <th>No</th>
-     <th>Nama</th>
-     <th>Judul Buku</th>
-     <th>Tgl. Peminjaman</th>
-     <th>Aksi</th>
+   <table class="uk-text-center uk-table uk-table-justify uk-table-divider">
+    <tr class="uk-background-secondary uk-padding">
+     <th class="uk-text-center">No</th>
+     <th class="uk-text-center">Nama</th>
+     <th class="uk-text-center">Judul Buku</th>
+     <th class="uk-text-center">Tgl. Peminjaman</th>
+     <th class="uk-text-center">Aksi</th>
     </tr>
 
     <?php
@@ -160,11 +159,11 @@ if (isset($_POST['submit'])) {
     ?>
 
     <tr>
-     <td><?= $no++ ?></td>
-     <td><?= $r['nama'] ?></td>
-     <td><?= $r['judul'] ?></td>
-     <td><?= $r['tgl_pinjam'] ?></td>
-     <td> <a class="uk-button uk-button-danger" href="hapus5.php?id=<?= $r['id']; ?>">Hapus</a> </td>
+     <td class="uk-text-center"><?= $no++ ?></td>
+     <td class="uk-text-center"><?= $r['nama'] ?></td>
+     <td class="uk-text-center"><?= $r['judul'] ?></td>
+     <td class="uk-text-center"><?= $r['tgl_pinjam'] ?></td>
+     <td class="uk-text-center"> <a class="uk-button uk-button-danger" href="hapus5.php?id=<?= $r['id']; ?>">Hapus</a> </td>
     </tr>
 
     <?php
